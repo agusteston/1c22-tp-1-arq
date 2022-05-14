@@ -394,7 +394,7 @@
       "renderer": "flot",
       "seriesOverrides": [
         {
-          "alias": "asPercent(stats.gauges.cadvisor.1c22-tp-1_node_1.memory_usage, 1952000000)",
+          "alias": "asPercent(stats.gauges.cadvisor.node_1.memory_usage, 1952000000)",
           "yaxis": 1
         },
         {
@@ -500,8 +500,8 @@
         "allValue": null,
         "current": {
           "selected": false,
-          "text": "1c22-tp-1_node_1",
-          "value": "1c22-tp-1_node_1"
+          "text": "node_1",
+          "value": "node_1"
         },
         "error": null,
         "hide": 0,
@@ -512,46 +512,46 @@
         "options": [
           {
             "selected": true,
-            "text": "1c22-tp-1_node_1",
-            "value": "1c22-tp-1_node_1"
+            "text": "node_1",
+            "value": "node_1"
           },
           {
             "selected": false,
-            "text": "1c22-tp-1_node_2",
-            "value": "1c22-tp-1_node_2"
+            "text": "node_2",
+            "value": "node_2"
           },
           {
             "selected": false,
-            "text": "1c22-tp-1_node_3",
-            "value": "1c22-tp-1_node_3"
+            "text": "node_3",
+            "value": "node_3"
           },
           {
             "selected": false,
-            "text": "1c22-tp-1_cadvisor_1",
-            "value": "1c22-tp-1_cadvisor_1"
+            "text": "cadvisor",
+            "value": "cadvisor"
           },
           {
             "selected": false,
-            "text": "1c22-tp-1_grafana_1",
-            "value": "1c22-tp-1_grafana_1"
+            "text": "grafana",
+            "value": "grafana"
           },
           {
             "selected": false,
-            "text": "1c22-tp-1_graphite_1",
-            "value": "1c22-tp-1_graphite_1"
+            "text": "graphite",
+            "value": "graphite"
           },
           {
             "selected": false,
-            "text": "1c22-tp-1_nginx_1",
-            "value": "1c22-tp-1_nginx_1"
+            "text": "nginx",
+            "value": "nginx"
           },
           {
             "selected": false,
-            "text": "1c22-tp-1_bbox_1",
-            "value": "1c22-tp-1_bbox_1"
+            "text": "bbox",
+            "value": "bbox"
           }
         ],
-        "query": "1c22-tp-1_node_1, 1c22-tp-1_node_2, 1c22-tp-1_node_3, 1c22-tp-1_cadvisor_1, 1c22-tp-1_grafana_1, 1c22-tp-1_graphite_1,  1c22-tp-1_nginx_1, 1c22-tp-1_bbox_1",
+        "query": "node_1, node_2, node_3, cadvisor, grafana, graphite,  nginx, bbox",
         "queryValue": "",
         "skipUrlSync": false,
         "type": "custom"
