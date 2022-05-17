@@ -5,7 +5,7 @@ const router = Router();
 
 const pingControler = new PingControler();
 
-router.get('/ping', (req, res) => {
+router.get('/node/ping', (req, res) => {
   pingControler.ping(req, res)
 });
 
