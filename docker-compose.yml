@@ -67,7 +67,7 @@ services:
             - ./app:/home/node/app
         ports:
             - "3003:3003"
-        command: "npm start" 
+        command: sh -c 'npm install && npm ci && npm install nodemon && npm start'
         links:
             - "bbox"
             - "graphite"
