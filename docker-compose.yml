@@ -11,7 +11,7 @@ services:
             - ./store/static/files:/static:ro
         links:
             - node_1
-            - bbox
+            - "bbox"
 
     graphite:
         image: graphiteapp/graphite-statsd:1.1.8-8
@@ -67,7 +67,11 @@ services:
             - ./app:/home/node/app
         ports:
             - "3003:3003"
-        command: "npm start"  
+        command: "npm start" 
+        links:
+            - "bbox"
+            - "graphite"
+            - "cadvisor"
 
 
 
