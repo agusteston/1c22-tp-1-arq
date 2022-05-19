@@ -24,18 +24,40 @@ config:
             port: 8125
             prefix: "artillery-node"
 
-
   pool: 50 # All HTTP requests from all virtual users will be sent over the same connections
 
   phases:
+    - name: Plain
+      duration: 5
+      arrivalRate: 30
     - name: Ramp
-      duration: 30
-      arrivalRate: 5
+      duration: 5
+      rampTo: 60
+    - name: Ramp
+      duration: 5
+      rampTo: 30
+    - name: Ramp
+      duration: 5
+      rampTo: 60
+    - name: Ramp
+      duration: 5
+      rampTo: 30
+    - name: Ramp
+      duration: 5
+      rampTo: 60
+    - name: Ramp
+      duration: 5
+      rampTo: 30
+    - name: Ramp
+      duration: 5
+      rampTo: 60
+    - name: Ramp
+      duration: 5
       rampTo: 30
     - name: Plain
-      duration: 120
+      duration: 5
       arrivalRate: 30
-    
+
 
 scenarios:
   - name: Root (/)
