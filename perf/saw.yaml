@@ -16,13 +16,13 @@ config:
           port: 8125
           prefix: "artillery-node"
 
-      bbox_2:
-        target: 'http://localhost:5555/bbox_2'
-        plugins:
-          statsd:
-            host: localhost
-            port: 8125
-            prefix: "artillery-node"
+    bbox_2:
+      target: 'http://localhost:5555/bbox_2'
+      plugins:
+        statsd:
+          host: localhost
+          port: 8125
+          prefix: "artillery-node"
 
   pool: 50 # All HTTP requests from all virtual users will be sent over the same connections
 
@@ -33,30 +33,38 @@ config:
     - name: Ramp
       duration: 5
       rampTo: 60
-    - name: Ramp
-      duration: 5
-      rampTo: 30
-    - name: Ramp
-      duration: 5
-      rampTo: 60
-    - name: Ramp
-      duration: 5
-      rampTo: 30
+      arrivalRate: 30
     - name: Ramp
       duration: 5
       rampTo: 60
+      arrivalRate: 30
     - name: Ramp
       duration: 5
       rampTo: 30
+      arrivalRate: 60
     - name: Ramp
       duration: 5
       rampTo: 60
+      arrivalRate: 30
     - name: Ramp
       duration: 5
       rampTo: 30
+      arrivalRate: 60
+    - name: Ramp
+      duration: 5
+      rampTo: 60
+      arrivalRate: 30
+    - name: Ramp
+      duration: 5
+      rampTo: 30
+      arrivalRate: 60
+    - name: Ramp
+      duration: 5
+      rampTo: 60
+      arrivalRate: 30
     - name: Plain
       duration: 5
-      arrivalRate: 30
+      arrivalRate: 60
 
 
 scenarios:
