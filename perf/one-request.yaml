@@ -1,0 +1,39 @@
+config:
+  environments:
+    node:
+      target: 'http://localhost:5555/node/ping'
+      plugins:
+        statsd:
+          host: localhost
+          port: 8125
+          prefix: "artillery-node"
+
+    bbox_1:
+      target: 'http://localhost:5555/bbox_1'
+      plugins:
+        statsd:
+          host: localhost
+          port: 8125
+          prefix: "artillery-node"
+
+    bbox_2:
+      target: 'http://localhost:5555/bbox_2'
+      plugins:
+        statsd:
+          host: localhost
+          port: 8125
+          prefix: "artillery-node"
+
+  pool: 50 # All HTTP requests from all virtual users will be sent over the same connections
+
+  phases:
+    - name: One Request
+      duration: 10
+      arrivalCount: 1
+
+
+scenarios:
+  - name: Root (/)
+    flow:
+      - get:
+          url: '/'
