@@ -17,7 +17,7 @@ config:
           prefix: "artillery-node"
 
     bbox_2:
-      target: 'http://localhost:5555/bbox_2'
+      target: 'http://localhost:9091/bbox_2'
       plugins:
         statsd:
           host: localhost
@@ -29,7 +29,7 @@ config:
   phases:
     - name: One Request
       duration: 10
-      arrivalCount: 1
+      arrivalCount: 250000
 
 
 scenarios:

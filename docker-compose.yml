@@ -64,7 +64,7 @@ services:
         environment:
             - NODE_ENV=production
         volumes:
-            - ./app:/home/node/app
+            - ./app/node_1:/home/node/app
         ports:
             - "3003:3003"
         command: sh -c 'npm install && npm ci && npm install nodemon && npm start'
@@ -72,6 +72,40 @@ services:
             - "bbox"
             - "graphite"
             - "cadvisor"
+
+    node_2:
+        image: "node:18-alpine"
+        container_name: node_2
+        user: "node"
+        working_dir: /home/node/app
+        environment:
+            - NODE_ENV=production
+        volumes:
+            - ./app/node_2:/home/node/app
+        ports:
+            - "3004:3003"
+        command: sh -c 'npm install && npm ci && npm install nodemon && npm start'
+        links:
+            - "bbox"
+            - "graphite"
+            - "cadvisor"
+
+    node_3:
+        image: "node:18-alpine"
+        container_name: node_3
+        user: "node"
+        working_dir: /home/node/app
+        environment:
+            - NODE_ENV=production
+        volumes:
+            - ./app/node_3:/home/node/app
+        ports:
+            - "3005:3003"
+        command: sh -c 'npm install && npm ci && npm install nodemon && npm start'
+        links:
+            - "bbox"
+            - "graphite"
+            - "cadvisor"                
 
 
 
